@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <main id="main">
+      <header id="header">
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            class="form-control"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            class="form-control"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="number-label" for="age">Age <span>(optional)</span></label>
+          <input
+            id="number"
+            name="age"
+            class="form-control"
+            type="number"
+            min="1"
+            max="120"
+            placeholder="Age"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="role"
+            >Which option best describes your current role?</label
+          >
+          <select id="dropdown" name="role" class="form-control" required>
+            <option value="to-select" selected disabled
+              >Select current role</option
+            >
+            <option value="student">Student</option>
+            <option value="full-job">Full Time Job</option>
+            <option value="full-learner">Full Time Learner</option>
+            <option value="not-say">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p class="input-radio">
+            Would you recommend freeCodeCamp to a friend?
+          </p>
+          <label class="input-radio">
+            <input
+              type="radio"
+              name="user-recommend"
+              value="definitely"
+              checked
+            />Definitely
+          </label>
+
+          <label class="input-radio">
+            <input type="radio" name="user-recommend" value="maybe" />Maybe
+          </label>
+
+          <label class="input-radio">
+            <input type="radio" name="user-recommend" value="not-sure" />Not
+            Sure
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="favorite-feature"
+            >What is your favorite feature of freeCodeCamp?</label
+          >
+          <select
+            id="dropdown"
+            name="favorite-feature"
+            class="form-control"
+            required
+          >
+            <option value="to-select" selected disabled
+              >Select an option</option
+            >
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open-source">Open Source</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p class="input-checkbox">
+            What would you like to see improved?
+            <span>(Check all that apply)</span>
+          </p>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="frontend" />Front-end
+            Projects
+          </label>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="backend" />Back-end
+            Projects
+          </label>
+
+          <label class="input-checkbox">
+            <input
+              type="checkbox"
+              name="improve"
+              value="data-visualization"
+            />Data Visualization
+          </label>
+
+          <label class="input-checkbox">
+            <input
+              type="checkbox"
+              name="improve"
+              value="challenges"
+            />Challenges
+          </label>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="open-source" />Open
+            Source Community
+          </label>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="help-rooms" />Gitter
+            help rooms
+          </label>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="videos" />Videos
+          </label>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="meetups" />City Meetups
+          </label>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="wiki" />Wiki
+          </label>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="forum" />Forum
+          </label>
+
+          <label class="input-checkbox">
+            <input type="checkbox" name="improve" value="courses" />Additional
+            Courses
+          </label>
+        </div>
+
+        <div class="form-group">
+          <p class="comments-header">Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            name="comments"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Run free code camp tests -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
