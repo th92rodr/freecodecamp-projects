@@ -57,7 +57,7 @@ header h1 {
   font-size: 18px;
 }
 #timeline .dates {
-  max-width: 40%;
+  max-width: 45%;
 }
 #timeline li {
   margin: 2.5%;
@@ -68,7 +68,7 @@ header h1 {
 #timeline .citation {
   font-style: italic;
   text-align: left;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 footer {
@@ -80,4 +80,29 @@ footer p {
 }
 footer a {
   color: #477ca7;
+}
+footer a:visited {
+  color: #74638f;
+}
+
+@media (max-width: 1200px) {
+  #timeline .dates {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 34px;
+  }
+
+  #timeline .dates {
+    max-width: 90%;
+  }
 }
