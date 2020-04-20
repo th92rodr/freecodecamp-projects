@@ -1,0 +1,246 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css";
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background-color: #eee;
+}
+#header #logo-container {
+  width: 300px;
+}
+#header #logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+#header #nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#header .nav-link {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 80px;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+}
+#hero #form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#hero #form input#email {
+  margin-bottom: 15px;
+  text-align: left;
+  padding: 3% 30% 3% 3%;
+}
+#hero #form input#submit {
+  background-color: #f1c40f;
+  border: none;
+  padding: 3% 5%;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#content #features {
+  width: 50%;
+  margin: 60px auto 0 auto;
+}
+
+#features .feature-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+#features .feature-container .feature-icon {
+  color: darkorange;
+  margin-right: 80px;
+  font-size: 15px;
+}
+
+#features .feature-container .feature-description {
+  margin: 0;
+  padding: 0;
+}
+#features .feature-container .feature-description h2 {
+  margin: 0;
+  padding: 0;
+}
+#features .feature-container .feature-description p {
+  font-size: 16px;
+}
+
+#video-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+#video-container iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  margin: 60px auto 0 auto;
+}
+#pricing .plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  width: calc(100% / 3);
+}
+#pricing .plan .plan-level {
+  background-color: #ddd;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#pricing .plan ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+#pricing .plan li {
+  padding: 5px 0;
+}
+#pricing .plan button {
+  background-color: #f1c40f;
+  border: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 20px 0 15px 0;
+}
+
+footer {
+  background-color: #ddd;
+  padding: 20px 20px 10px 20px;
+  margin-top: 60px;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+}
+footer ul li {
+  margin-right: 20px;
+}
+footer ul a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+}
+footer span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 15px;
+  color: #444;
+  margin: 10px;
+}
+
+@media (max-width: 1200px) {
+  #header .nav-link {
+    margin-right: 60px;
+  }
+
+  #content #features {
+    width: 60%;
+  }
+
+  #pricing {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #content #features {
+    width: 70%;
+  }
+
+  #pricing {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #header .nav-link {
+    margin-right: 30px;
+  }
+
+  #features .feature-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #pricing {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #pricing .plan {
+    width: 70%;
+  }
+}
