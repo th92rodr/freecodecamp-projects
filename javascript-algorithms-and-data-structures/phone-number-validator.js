@@ -27,6 +27,7 @@ function phoneNumberValidator(phone) {
     return false;
   }
 
+  // check for the national code
   if (phone[1] == " ") {
     if (phone[0] != "1") {
       console.log("not valid - national code invalid\n");
@@ -41,17 +42,20 @@ function phoneNumberValidator(phone) {
     phone = phone.slice(1);
   }
 
+  // make sure the phone number has the minimum length possible
   if (phone.length < 10) {
     console.log("not valid - too small\n");
     return false;
   }
 
+  // check for parentheses
   if (phone[0] == "(") {
     if (phone[4] != ")") {
-      console.log("not valid - not closing paranthesis\n");
+      console.log("not valid - not closing parentheses\n");
       return false;
     }
 
+    // check if the 3 following chars are numbers
     if (!/[0-9]{3}/.test(phone.slice(1, 4))) {
       console.log("not valid - regional code with less than 3 numbers\n");
       return false;
@@ -59,7 +63,8 @@ function phoneNumberValidator(phone) {
 
     phone = phone.slice(5);
   } else {
-    if (!/[0-9][0-9][0-9]/.test(phone.slice(0, 3))) {
+    // check if the 3 following chars are numbers
+    if (!/[0-9]{3}/.test(phone.slice(0, 3))) {
       console.log("not valid - regional code with less than 3 numbers\n");
       return false;
     }
@@ -67,6 +72,7 @@ function phoneNumberValidator(phone) {
     phone = phone.slice(3);
   }
 
+  // check if the next char is a space, an hyphen or a number
   if (phone[0] == " " || phone[0] == "-") {
     phone = phone.slice(1);
   } else if (!/[0-9]+/.test(phone[0])) {
@@ -74,12 +80,14 @@ function phoneNumberValidator(phone) {
     return false;
   }
 
-  if (!/[0-9][0-9][0-9]/.test(phone.slice(0, 3))) {
+  // check if the 3 following chars are numbers
+  if (!/[0-9]{3}/.test(phone.slice(0, 3))) {
     console.log("not valid - first part with less than 3 numbers\n");
     return false;
   }
   phone = phone.slice(3);
 
+  // check if the next char is a space, an hyphen or a number
   if (phone[0] == " " || phone[0] == "-") {
     phone = phone.slice(1);
   } else if (!/[0-9]+/.test(phone[0])) {
@@ -87,12 +95,14 @@ function phoneNumberValidator(phone) {
     return false;
   }
 
-  if (!/[0-9][0-9][0-9]/.test(phone.slice(0, 4))) {
+  // check if the 4 following chars are numbers
+  if (!/[0-9]{4}/.test(phone.slice(0, 4))) {
     console.log("not valid - second part with less than 4 numbers\n");
     return false;
   }
   phone = phone.slice(4);
 
+  // check if there is something left
   if (phone.length > 0) {
     console.log("not valid - too many numbers");
     return false;
@@ -101,7 +111,7 @@ function phoneNumberValidator(phone) {
   return true;
 }
 
-phoneNumberValidator("555-555-5555"); // should return a boolean.
+phoneNumberValidator("555-555-5555"); // should return true.
 phoneNumberValidator("1 555-555-5555"); // should return true.
 phoneNumberValidator("1 (555) 555-5555"); // should return true.
 phoneNumberValidator("5555555555"); // should return true.
