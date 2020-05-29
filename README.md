@@ -1,6 +1,6 @@
 # FreeCodeCamp
 
-Repo to store my solutions of the projects from [freecodecamp.org](freecodecamp.org) curriculum.
+Repo to store my solutions of the projects from [freecodecamp.org](https://www.freecodecamp.org/) curriculum.
 
 ## Responsive Web Design
 
