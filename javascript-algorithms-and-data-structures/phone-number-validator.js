@@ -1,6 +1,9 @@
 /**
+ * Telephone Number Validator
+ *
  * Return true if the passed string looks like a valid US phone number.
  * The user may fill out the form field any way they choose as long as it has the format of a valid US number.
+ *
  * The following are examples of valid formats for US numbers (refer to the tests below for other variants):
  *     555-555-5555
  *     (555)555-5555
@@ -16,11 +19,10 @@
  * If the country code is provided, you must confirm that the country code is 1.
  *
  * Return true if the string is a valid US phone number; otherwise return false.
+ *
  **/
 
 function phoneNumberValidator(phone) {
-  //console.log(phone);
-
   // check for characters and special characters
   if (/[A-Za-z&\/\\#,+$~^%.'":*\!\?\<>_{}]+/.test(phone)) {
     console.log("not valid - letters or special chars\n");
