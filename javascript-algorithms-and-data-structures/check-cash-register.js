@@ -1,4 +1,6 @@
 /**
+ * Cash Register
+ *
  * Design a cash register drawer function checkCashRegister() that accepts purchase price as the
  * first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the
  * third argument.
@@ -15,6 +17,7 @@
  *
  * Otherwise, return {status: "OPEN", change: [...]}, with the change due in coins and bills,
  * sorted in highest to lowest order, as the value of the change key.
+ *
  **/
 
 const unitsMap = new Map([
@@ -33,31 +36,26 @@ function checkCurrencyUnitAmountAvailable(cid, unit, numberOfUnitsNeeded) {
   const unitValue = unitsMap.get(unit);
   const [, amountAvailable] = cid.find((e) => e[0] == unit);
   const numberOfUnitsAvailable = amountAvailable / unitValue;
-  //console.log("numberOfUnitsAvailable: ", numberOfUnitsAvailable);
 
   const diff = numberOfUnitsAvailable - numberOfUnitsNeeded;
-  //console.log("diff: ", diff);
   if (diff >= 0) return numberOfUnitsNeeded;
   else return numberOfUnitsAvailable;
 }
 
 function calculateAmountNeededByUnit(cid, unit, change) {
   const unitValue = unitsMap.get(unit);
-  //console.log(unit, unitValue);
 
   if (change < unitValue) {
     return null;
   }
 
   let numberOfUnitsNeeded = parseInt(change / unitValue);
-  //console.log("numberOfUnitsNeeded: ", numberOfUnitsNeeded);
   numberOfUnitsNeeded = checkCurrencyUnitAmountAvailable(
     cid,
     unit,
     numberOfUnitsNeeded
   );
-  //console.log("numberOfUnitsNeeded: ", numberOfUnitsNeeded);
-  //console.log([unit, numberOfUnitsNeeded * unitValue]);
+
   return [unit, numberOfUnitsNeeded * unitValue];
 }
 
@@ -72,7 +70,7 @@ function getTotalCashInDrawerAvailable(cid) {
   const totalAvailable = cid.reduce((acc, current) => {
     return parseFloat((acc + parseFloat(current[1])).toFixed(2));
   }, 0.0);
-  //console.log("total: ", totalAvailable);
+
   return totalAvailable;
 }
 
@@ -80,7 +78,6 @@ function checkCashRegister(price, cash, cid) {
   const totalAvailable = getTotalCashInDrawerAvailable(cid);
 
   let change = cash - price;
-  //console.log("change: ", change);
 
   if (change > totalAvailable) {
     return { status: "INSUFFICIENT_FUNDS", change: [] };
@@ -97,9 +94,6 @@ function checkCashRegister(price, cash, cid) {
     resultArray.push(partialArray);
     change = calculateRemainingChange(change, partialArray);
   });
-
-  //console.log("resultArray: ", resultArray);
-  //console.log("change: ", change);
 
   if (change != 0) {
     return { status: "INSUFFICIENT_FUNDS", change: [] };
