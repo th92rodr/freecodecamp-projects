@@ -1,4 +1,10 @@
-# freeCodeCamp Curriculum Projects
+<p align="center">
+  <a href="https://www.freecodecamp.org/">
+    <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_primary_small.svg" alt="freeCodeCamp logo" height="80">
+  </a>
+</p>
+
+<h1 align="center">freeCodeCamp Curriculum Projects</h1>
 
 This repository contains my solutions to the projects from the [freecodecamp.org](https://www.freecodecamp.org/) curriculum.
 
@@ -9,7 +15,7 @@ This repository contains my solutions to the projects from the [freecodecamp.org
 Below is a list of the main projects by certification.  
 You can explore each project in its folder.
 
-### ✅ Responsive Web Design
+### 🔹 Responsive Web Design
 Projects built using HTML and CSS:
 - [x] [Tribute Page](https://github.com/th92rodr/freecodecamp-projects/tree/master/responsive-web-design/tribute-page)
 - [x] [Survey Form](https://github.com/th92rodr/freecodecamp-projects/tree/master/responsive-web-design/survey-form)
@@ -17,7 +23,7 @@ Projects built using HTML and CSS:
 - [x] [Technical Documentation Page](https://github.com/th92rodr/freecodecamp-projects/tree/master/responsive-web-design/technical-documentation-page)
 - [x] [Personal Portfolio Webpage](https://github.com/th92rodr/freecodecamp-projects/tree/master/responsive-web-design/personal-portfolio-page)
 
-### ✅ JavaScript Algorithms and Data Structures
+### 🔹 JavaScript Algorithms and Data Structures
 Projects demonstrating core JavaScript skills:
 - [x] [Palindrome Checker](https://github.com/th92rodr/freecodecamp-projects/blob/master/javascript-algorithms-and-data-structures/palindrome-checker.js)
 - [x] [Roman Numeral Converter](https://github.com/th92rodr/freecodecamp-projects/blob/master/javascript-algorithms-and-data-structures/roman-numeral-converter.js)
@@ -25,7 +31,7 @@ Projects demonstrating core JavaScript skills:
 - [x] [Telephone Number Validator](https://github.com/th92rodr/freecodecamp-projects/blob/master/javascript-algorithms-and-data-structures/phone-number-validator.js)
 - [x] [Cash Register](https://github.com/th92rodr/freecodecamp-projects/blob/master/javascript-algorithms-and-data-structures/check-cash-register.js)
 
-### ✅ Back End Development and APIs
+### 🔹 Back End Development and APIs
 Node.js and Express projects:
 - [x] [Timestamp Microservice](https://github.com/th92rodr/timestamp-microservice)
 - [x] [Request Header Parser Microservice](https://github.com/th92rodr/request-header-parser-microservice)
@@ -49,7 +55,8 @@ git clone git@github.com:th92rodr/freecodecamp-projects.git
 cd freecodecamp-projects/<project-folder>
 ```
 
-3. Open `index.html` in your browser, or run with a local server.
+3. Open `index.html` in your browser, or run with a local server for frontend projects.
+Or follow instructions in the project folder to run backend projects.
 
 ---
 
@@ -57,5 +64,5 @@ cd freecodecamp-projects/<project-folder>
 
 This project is licensed under the [MIT License](LICENSE.md).
 
-This repository is for educational purposes.  
+This repository is for educational purposes only.  
 All projects were built by me as part of the freecodecamp curriculum.
